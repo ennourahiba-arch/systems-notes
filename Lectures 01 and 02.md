@@ -187,6 +187,8 @@ instructions per second = clock frequency / CPI
 | How the CPU switches | When a job blocks | **Timer interrupt** |
 | Problem / result | CPU left idle during blocking I/O | **Pseudo-parallelism**; UNIX (Thompson & Ritchie) |
 
+**Exam-ready definition:** Multiprogramming means keeping several jobs in main memory at the same time so that the CPU always has something to execute. When the running job has to wait (for example for I/O), the OS switches the CPU to another job instead of leaving it idle. The goal is to maximize CPU utilization. On a single core the jobs are not executed simultaneously but interleaved. Time-sharing extends this idea by also switching jobs periodically (via a timer), frequently enough that each user can interact with their program.
+
 OS responsibilities in multiprogramming: job scheduling, memory protection, I/O operations.
 
 ### Von Neumann architecture
